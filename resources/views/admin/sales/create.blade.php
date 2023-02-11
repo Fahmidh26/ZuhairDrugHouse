@@ -39,7 +39,7 @@
 							</tr>
 							<tr>
 								  <td>
-									<select id="item" name="item[]" class="form-control" required="">
+									<select id="item" name="item[]" class="select2 form-control" required="">
 										<option value="" selected="" disabled="">Select Product</option>
 										@foreach($products as $product)
 											 <option value="{{ $product->id }}">{{ $product->purchase->product }}</option>	
@@ -117,7 +117,10 @@
 
 <script>
 	$(document).ready(function(){
-		var html='<tr><td><select id="item" name="item[]" class="form-control" required=""><option value="" selected="" disabled="">Select Product</option>@foreach($products as $product)<option data-tokens="{{ $product->purchase->product }}" value="{{ $product->id }}">{{$product->purchase->product }}</option>@endforeach</select></td><td><input class="form-control stock" type="text" id="stock" name="stock[]" required="" readonly></td><td><input class="form-control unit_price" type="text" id="unit_cost" name="unit_cost[]" required=""></td><td><input class="form-control qty" type="text" id="qty" name="qty[]" required=""><td><input class="form-control total" type="text" id="amount" name="amount[]" value="0" readonly></td></td><td><input class="btn btn-danger" type="button" name="remove" id="remove" value="remove"></td></tr>';
+		var html='<tr><td><select id="item" name="item[]" class="select3 form-control" required=""><option value="" selected="" disabled="">Select Product</option>@foreach($products as $product)<option data-tokens="{{ $product->purchase->product }}" value="{{ $product->id }}">{{$product->purchase->product }}</option>@endforeach</select></td><td><input class="form-control stock" type="text" id="stock" name="stock[]" required="" readonly></td><td><input class="form-control unit_price" type="text" id="unit_cost" name="unit_cost[]" required=""></td><td><input class="form-control qty" type="text" id="qty" name="qty[]" required=""><td><input class="form-control total" type="text" id="amount" name="amount[]" value="0" readonly></td></td><td><input class="btn btn-danger" type="button" name="remove" id="remove" value="remove"></td></tr>';
+
+		$(".select3").select2();
+
 		var x =1;
 	  $("#add").click(function(){
 		$("#table_field").append(html);
