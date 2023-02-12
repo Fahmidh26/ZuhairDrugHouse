@@ -73,6 +73,10 @@
 										<option value="Rent">Rent</option>						
 										<option value="Electricity">Electricity</option>	
 										<option value="Conveyance">Conveyance</option>	
+										<option value="Personal">Personal</option>						
+										<option value="Store">Store</option>	
+										<option value="Entertaintment">Entertaintment</option>	
+										<option value="Others">Others</option>	
 									</select>
 								{{-- @error('category_id') 
 								 <span class="text-danger">{{ $message }}</span>

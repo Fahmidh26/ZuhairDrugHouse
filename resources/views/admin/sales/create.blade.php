@@ -117,13 +117,15 @@
 
 <script>
 	$(document).ready(function(){
-		var html='<tr><td><select id="item" name="item[]" class="select3 form-control" required=""><option value="" selected="" disabled="">Select Product</option>@foreach($products as $product)<option data-tokens="{{ $product->purchase->product }}" value="{{ $product->id }}">{{$product->purchase->product }}</option>@endforeach</select></td><td><input class="form-control stock" type="text" id="stock" name="stock[]" required="" readonly></td><td><input class="form-control unit_price" type="text" id="unit_cost" name="unit_cost[]" required=""></td><td><input class="form-control qty" type="text" id="qty" name="qty[]" required=""><td><input class="form-control total" type="text" id="amount" name="amount[]" value="0" readonly></td></td><td><input class="btn btn-danger" type="button" name="remove" id="remove" value="remove"></td></tr>';
+		var html='<tr><td><select id="item" name="item[]" class="select2 form-control" required=""><option value="" selected="" disabled="">Select Product</option>@foreach($products as $product)<option data-tokens="{{ $product->purchase->product }}" value="{{ $product->id }}">{{$product->purchase->product }}</option>@endforeach</select></td><td><input class="form-control stock" type="text" id="stock" name="stock[]" required="" readonly></td><td><input class="form-control unit_price" type="text" id="unit_cost" name="unit_cost[]" required=""></td><td><input class="form-control qty" type="text" id="qty" name="qty[]" required=""><td><input class="form-control total" type="text" id="amount" name="amount[]" value="0" readonly></td></td><td><input class="btn btn-danger" type="button" name="remove" id="remove" value="remove"></td></tr>';
 
-		$(".select3").select2();
+		$(".select2").select2();
 
 		var x =1;
 	  $("#add").click(function(){
 		$("#table_field").append(html);
+		$(".select2").select2();
+	
 	  });
 	  $("#table_field").on('click', '#remove', function () {
     $(this).closest('tr').remove();
@@ -179,12 +181,12 @@
   // Now you can use the inputValue variable to access the value of the input element
 	});
 
-	// document.querySelector('#vat-percentage').addEventListener('input', function() {
- 	// 	var vat_value = this.value;
-	// 	var grandtotal = document.getElementById("subtotal").value;
-	// 	var vat = ((vat_value / 100) * grandtotal) + parseInt(grandtotal);
-	// 	$("#grandtotal").val(vat);
-	// 	console.log(vat);
+	// $("#item").on("change", "select[name='item[]']", function () {
+ 	// 	// var vat_value = this.value;
+	// 	// var grandtotal = document.getElementById("subtotal").value;
+	// 	// var vat = ((vat_value / 100) * grandtotal) + parseInt(grandtotal);
+	// 	// $("#grandtotal").val(vat);
+	// 	console.log("ananan");
 	// });
 
 	$("#mySelect").change(function() {
