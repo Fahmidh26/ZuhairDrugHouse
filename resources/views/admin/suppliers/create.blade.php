@@ -35,7 +35,7 @@
 							</div>
 						</div>
 						<div class="col-lg-6">
-							<label>Email<span class="text-danger">*</span></label>
+							<label>Email</label>
 							<input class="form-control" type="text" name="email" id="email">
 						</div>
 					</div>
