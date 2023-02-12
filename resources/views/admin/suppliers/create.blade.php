@@ -50,7 +50,7 @@
 							</div>
 						</div>
 						<div class="col-lg-6">
-							<label>Company<span class="text-danger">*</span></label>
+							<label>Company</label>
 							<input class="form-control" type="text" name="company">
 						</div>
 					</div>
@@ -60,7 +60,7 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label>Address <span class="text-danger">*</span></label>
+								<label>Address</label>
 								<input type="text" name="address" class="form-control">
 							</div>
 						</div>
