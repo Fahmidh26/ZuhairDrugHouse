@@ -36,7 +36,8 @@
                                     <th>Supplier</th>
                                     <th>Purchase Cost</th>
                                     <th>Quantity</th>
-                                    <th>Expire Date</th>                                </tr>
+                                    <th>Expire Date</th>                   
+                                 </tr>
                             </thead>
                             <tbody>
                             @foreach ($purchases as $purchase)
@@ -53,9 +54,9 @@
                                         </h2>
                                     </td>
                                     <td>{{$purchase->category->name}}</td>
-                                    <td>{{AppSettings::get('app_currency', '$')}}{{$purchase->price}}</td>
-                                    <td>{{$purchase->quantity}}</td>
                                     <td>{{$purchase->supplier->name}}</td>
+                                    <td>{{AppSettings::get('app_currency', 'BDT')}} {{$purchase->cost_price}}</td>
+                                    <td>{{$purchase->quantity}}</td>
                                     <td>{{date_format(date_create($purchase->expiry_date),"d M, Y")}}</td>
                                 </tr>
                                 @endif
