@@ -23,10 +23,10 @@
                 <!-- Add Product -->
                 <form method="post" enctype="multipart/form-data" id="update_service" action="{{route('products.store')}}">
                     @csrf
-                    <div class="service-fields mb-3">
+                    <div class="service-fields mb-1">
                         <div class="row">
                             
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Product <span class="text-danger">*</span></label>
                                     <select class="select2 form-select form-control" name="product"> 
@@ -36,11 +36,7 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <div class="service-fields mb-3">
-                        <div class="row">
+
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Selling Price<span class="text-danger">*</span></label>
@@ -48,7 +44,13 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                        </div>
+                    </div>
+                    
+                    <div class="service-fields mb-1">
+                        <div class="row">
+                          
+                            <div class="col-lg-6" hidden>
                                 <div class="form-group">
                                     <label>Discount (%)<span class="text-danger">*</span></label>
                                     <input class="form-control" type="text" name="discount" value="0">
@@ -57,8 +59,6 @@
                             
                         </div>
                     </div>
-
-                                    
                     
                     <div class="service-fields mb-3">
                         <div class="row">

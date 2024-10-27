@@ -52,7 +52,7 @@
 								</div>
 							</div>
 	
-							<div class="col-lg-6">
+							<div class="col-lg-6" hidden>
 								<div class="form-group">
 									<label>Discount (%)<span class="text-danger">*</span></label>
 									<input class="form-control" value="{{$product->discount}}" type="text" name="discount" value="{{old('discount')}}">
